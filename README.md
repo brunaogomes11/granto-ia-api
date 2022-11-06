@@ -8,7 +8,7 @@
 #### Retorna todos os itens
 
 ```http
-  POST /testar
+  POST ip/testar
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
