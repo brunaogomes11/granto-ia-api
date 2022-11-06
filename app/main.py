@@ -1,10 +1,10 @@
 from app.iaModel import predict
 import os
-from flask import Flask, jsonify, redirect, render_template, request, url_for
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def servidorLigado():
     return "Servidor Rodando"
 

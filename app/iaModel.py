@@ -19,8 +19,25 @@ class Net(torch.nn.Module):
         return output
 
 def predict(dados):
-  
+  for i in range(0,len(dados)):
+    if dados[i] < 1:
+      dados[i] = dados[i] / 1
+    elif dados[i] < 10:
+      dados[i] /= 10
+    elif dados[i] < 100:
+      dados[i] /= 100
+    elif dados[i] < 1000:
+      dados[i] /= 1000
+    elif dados[i] < 10000:
+      dados[i] /= 10000
+    elif dados[i] < 100000:
+      dados[i] /= 100000
+    elif dados[i] < 1000000:
+      dados[i] /= 1000000
+    else:
+      print('Erro')
   entrada = torch.FloatTensor(dados)
+  print(entrada)
   # print(entrada)
   # print(entrada.size())
   input_size = entrada.size()[0]
@@ -30,4 +47,5 @@ def predict(dados):
   modelo.eval()
   y_pred = modelo(entrada)
   y_pred = y_pred.detach().numpy()
+  y_pred = round(y_pred[0])
   return y_pred
