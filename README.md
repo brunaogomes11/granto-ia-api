@@ -29,4 +29,8 @@
 | `Codigo_Postal` | `float` | de 0 a 2000 |
 | `Renda` | `float` | Renda pessoal em reais |
 
-#### Retorna uma saída
+#### Retorna uma 
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `Aprovado` | `int` | 0 - Não, 1 - Sim |
