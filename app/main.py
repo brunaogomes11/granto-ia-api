@@ -1,4 +1,3 @@
-import pandas as pd
 from app.iaModel import predict
 import os
 from flask import Flask, jsonify, redirect, render_template, request, url_for
