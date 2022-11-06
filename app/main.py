@@ -3,8 +3,13 @@ import os
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'chinelinho'
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+cors = CORS(app, resources={r"/foo": {"origins": "http://localhost:port"}})
 
 @app.route('/', methods=["GET"])
+@cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
 def servidorLigado():
     return "Servidor Rodando"
 
