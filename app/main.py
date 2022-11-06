@@ -8,7 +8,7 @@ app = Flask(__name__)
 def servidorLigado():
     return "Servidor Rodando"
 
-@app.route("/testar", methods=["GET","POST"])
+@app.route("/testar", methods=["POST"])
 def criarModelos():
     request.data = request.get_json()
     if request.data:
