@@ -37,11 +37,8 @@ def predict(dados):
     else:
       print('Erro')
   entrada = torch.FloatTensor(dados)
-  print(entrada)
-  # print(entrada)
-  # print(entrada.size())
   input_size = entrada.size()[0]
-  hidden_size = 23
+  hidden_size = 70
   modelo = Net(input_size, hidden_size)
   modelo.load_state_dict(torch.load('app/modelo/modeloTreinado.pth'))
   modelo.eval()
