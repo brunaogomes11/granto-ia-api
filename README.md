@@ -8,7 +8,7 @@
 #### Retorna todos os itens
 
 ```http
-  POST ip/testar
+  POST https://granto-api.herokuapp.com/testar
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
