@@ -1,4 +1,5 @@
-﻿-f https://download.pytorch.org/whl/torch_stable.html
+-f https://download.pytorch.org/whl/torch_stable.html
+pandas==1.4.2
 Flask==2.1.1
 gunicorn==20.1.0
 numpy==1.22.3
@@ -7,3 +8,4 @@ torch==1.11.0+cpu
 torchvision==0.12.0+cpu
 urllib3==1.26.9
 Werkzeug==2.1.1
+matplotlib==3.5.1
